@@ -63,6 +63,13 @@ pricingElement.addEventListener('mouseout', function() {
 });
 
 
-
-choice[15]
-swatches[15]
+// select size
+let sizes = document.querySelectorAll(".sizes");
+sizes.forEach(size => {
+    size.addEventListener("click", () => {
+        // Reset the background color of all sizes
+        sizes.forEach(s => s.style.background = "");
+        // Set the background color of the clicked size
+        size.style.background = "orangered";
+    });
+});
